@@ -130,14 +130,3 @@ const initialCalendarState = { sunday: { breakfast: null, lunch: null, dinner: n
   thursday: { breakfast: null, lunch: null, dinner: null },
   friday: { breakfast: null, lunch: null, dinner: null },
   saturday: { breakfast: null, lunch: null, dinner: null, test: null } }
-
-
-git stuff to get a commit:
-# create the template project with create-react-app
-node_modules/.bin/create-react-app udareact-meals
-git init
-(git add .)
-(git commit -m 'message')
-git remote add origin https://github.com/udacity/reactnd-udacimeals-complete.git
-git fetch
-git reset --hard 6c458c57016e56c8e5f29c20a84dd705ea632cc8
