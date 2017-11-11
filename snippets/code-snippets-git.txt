@@ -8,6 +8,8 @@ git remote rm origin
 git remote add origin https://github.com/goapilz/udareact-meals-course.git
 git remote -v
 
+git push origin master
+
 
 git stuff to apply a commit to a non git project
 ================================================

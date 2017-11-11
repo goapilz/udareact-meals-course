@@ -130,3 +130,11 @@ const initialCalendarState = { sunday: { breakfast: null, lunch: null, dinner: n
   thursday: { breakfast: null, lunch: null, dinner: null },
   friday: { breakfast: null, lunch: null, dinner: null },
   saturday: { breakfast: null, lunch: null, dinner: null, test: null } }
+
+
+
+connect(mapStateToProps, mapDispatchToProps)(MyComponent)
+
+mapStateToProps(state, [ownProps])
+
+To accesss the backend server in your code, we have stored the URL to the API server in the environment variable `REACT_APP_BACKEND` which you can access in your code using `process.env.REACT_APP_BACKEND`. You can see this in action in `frontend/src/App.js` in `componentDidMount`.
