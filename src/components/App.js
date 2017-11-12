@@ -28,6 +28,7 @@ class App extends Component {
     }
 
     render() {
+        // console.log(this.props)
         return (
             <div>
                 <input type='text' ref={(input) => this.input = input}
