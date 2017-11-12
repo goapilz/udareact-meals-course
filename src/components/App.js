@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {addRecipe} from '../actions'
+import {addRecipe, removeFromCalendar} from '../actions'
 import { connect } from 'react-redux';
 
 class App extends Component {
@@ -8,13 +8,13 @@ class App extends Component {
     }
 
     submitFood = () => {
-        this.props.dispatch(addRecipe({
+        this.props.myAddRecipe({
             day: 'monday',
             meal: 'breakfast',
             recipe: {
                 label: this.input.value
             }
-        }))
+        })
         this.input.value = ''
     }
 
@@ -48,4 +48,11 @@ function mapStateToProps (calendar) {
     }
 }
 
-export default connect(mapStateToProps,)(App)
+function mapDispatchToProps (dispatch) {
+    return {
+        myAddRecipe: (data) => dispatch(addRecipe(data)),
+        myRemoveFromCalendar: (data) => dispatch(removeFromCalendar(data))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)
